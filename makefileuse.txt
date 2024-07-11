@@ -1,0 +1,38 @@
+Answer
+Makefile
+makefile
+OBJS = $(SRCS:.c=.o)
+
+Esta línea genera una lista de archivos objeto (.o) a partir de la lista de archivos fuente (.c) especificados en la variable SRCS. Cada archivo .c se convierte a un archivo .o correspondiente.
+makefile
+CFLAGS = -Wall -Wextra -Werror
+
+Esta línea establece las banderas de compilación que se utilizarán. -Wall habilita todas las advertencias, -Wextra habilita advertencias adicionales y -Werror convierte las advertencias en errores, lo que obliga a corregir todos los problemas encontrados durante la compilación.
+makefile
+all: $(NAME)
+
+Esta regla define el objetivo predeterminado all, que compila el archivo estático $(NAME).
+makefile
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
+
+Esta regla construye el archivo estático $(NAME) (probablemente libft.a) a partir de los archivos objeto $(OBJS). Utiliza el comando ar para crear el archivo estático, donde r significa "reemplazar" (si el archivo ya existe), c significa "crear" (si el archivo no existe) y s significa "indexar el archivo" (para mejorar el rendimiento de la vinculación).
+makefile
+clean:
+	rm -f $(OBJS)
+
+Esta regla elimina todos los archivos objeto ($(OBJS)) generados durante la compilación.
+makefile
+fclean: clean
+	rm -f $(NAME)
+
+Esta regla primero ejecuta la regla clean para eliminar los archivos objeto, y luego elimina el archivo estático $(NAME).
+makefile
+re: fclean all
+
+Esta regla ejecuta primero fclean para limpiar todo y luego all para volver a compilar todo.
+makefile
+.PHONY: all clean fclean re
+
+Esta sección marca las reglas all, clean, fclean y re como "ficticias", lo que significa que no dependen de ningún archivo en particular. Esto evita que Make intente buscar archivos con esos nombres y los trate como objetivos.
+En resumen, este Makefile se encarga de compilar los archivos fuente de la librería Libft, generar el archivo estático libft.a y proporcionar reglas para limpiar y recompilar el proyecto.
