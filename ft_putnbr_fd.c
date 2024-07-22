@@ -6,7 +6,7 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 13:06:20 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/17 13:06:28 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/22 11:44:39 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,40 @@
 **   el menos significativo. Para números negativos, imprime un signo menos ('-')
 **   antes de manejar el valor absoluto.
 */
+#include <unistd.h> 
 
+void ft_putnbr_fd(int n, int fd)
+{
+    if (n == 0)
+    {
+        write(fd, "0", 1); 
+        return;
+    }
 
+    if (n == -2147483648)
+    {
+        write(fd, "-2147483648", 11); 
+        return;
+    }
+
+    if (n < 0)
+    {
+        write(fd, "-", 1); 
+        n = -n; 
+    }
+
+    char buffer[12]; 
+    int i;
+    
+	i = 0;
+    while (n > 0)
+    {
+        buffer[i++] = n % 10 + '0'; 
+        n /= 10; 
+    }
+
+    while (i > 0)
+    {
+        write(fd, &buffer[--i], 1); 
+    }
+}
