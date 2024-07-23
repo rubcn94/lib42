@@ -23,17 +23,18 @@ int main(void)
     return 0;
 }
 */
-void *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-    size_t i = 0;
-    unsigned char *p = (unsigned char *)s;
+	unsigned char *p = (unsigned char *)s;	
+	size_t	i;
 
-    while (i < n)
-    {
-        p[i] = (unsigned char)c;
-        i++;
-    }
+	i = 0;
+	while (i < n)
+	{
+		p[i] = (unsigned char)c;
+		i++;
+	}
 
-    return s; // Devuelve el puntero al inicio del área de memoria modificada
+    return (s); // Devuelve el puntero al inicio del área de memoria modificada
 }
 
