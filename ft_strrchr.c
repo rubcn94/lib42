@@ -6,27 +6,35 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 12:49:19 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/24 14:01:20 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/24 14:24:14 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 
 char	*ft_strrchr(const char *str, int c)
+{
+	char	*result;
+	char	ch;
 
-	const char	*result;
-
+	ch = (char)c;
 	result = NULL;
 	while (*str)
 	{
-		if (*str == (char)c)
-			result = str;
+		if (*str == ch)
+		{
+			result = (char *)str;
+		}
 		str++;
 	}
-	if (c == '\0')
-		return (str);
+	if (ch == '\0')
+	{
+		return ((char *)str);
+	}
 	return (result);
 }
+
 /*
 #include <stdio.h>
 #include <string.h>
