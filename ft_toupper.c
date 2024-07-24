@@ -6,16 +6,14 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:58:07 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/19 13:58:07 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/24 04:28:55 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-	if(c >= 'a' && c <= 'z')
+	if (c >= 'a' && c <= 'z')
 		return (c - 32);
 	else
-		return(c);
+		return (c);
 }
-
-
