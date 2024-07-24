@@ -6,10 +6,11 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:57:30 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/24 05:12:22 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/24 13:27:14 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <string.h>
 

@@ -6,7 +6,7 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:56:06 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/24 05:10:39 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/24 12:27:50 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,5 @@
 
 int	ft_isdigit(int c)
 {
-	if (c >= 48 || c <= 57)
-		return (1);
-	return (0);
+	return (c >= '0' && c <= '9');
 }
-/*
-int main (void)
-{
-	printf("%d", ft_isdigit(51));
-}*/

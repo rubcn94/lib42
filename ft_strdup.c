@@ -6,7 +6,7 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:57:39 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/24 06:53:15 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/24 07:37:46 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_strcpy(char *dst, const char *src)
 {
 	while (*src)
 		*dst++ = *src++;
-	;
+	return ;
 }
 
 size_t	ft_strlen(const char *s);

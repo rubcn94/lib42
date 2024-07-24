@@ -6,7 +6,7 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:54:52 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/19 13:54:55 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/24 13:22:16 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,6 @@ int	ft_isalnum(int c)
 {
 	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
-	return (0);
+	else
+		return (0);
 }
