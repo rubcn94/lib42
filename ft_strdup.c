@@ -6,34 +6,36 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:57:39 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/19 13:57:40 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/24 06:53:15 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
-
 #include <stdlib.h>
 
-void ft_strcpy(char *dst, const char *src) {
-    while ((*dst++ = *src++))
-        ;
+void	ft_strcpy(char *dst, const char *src)
+{
+	while (*src)
+		*dst++ = *src++;
+	;
 }
 
-size_t ft_strlen(const char* s);
+size_t	ft_strlen(const char *s);
 
-char *ft_strdup(const char *src) {
-    size_t len = ft_strlen(src);
-    char *dst = (char *)malloc((len + 1) * sizeof(char));
-    
-    if (dst == NULL) {
-        return NULL;
-    }
-	ft_strcpy(dst,src);
+char	*ft_strdup(const char *src)
+{
+	size_t	len;
+	char	*dst;
 
-    return(dst);
+	len = ft_strlen(src);
+	dst = (char *) malloc((len + 1) * sizeof(char));
+	if (dst == NULL)
+		return (NULL);
+	ft_strcpy(dst, src);
+	return (dst);
 }
-
+/*
 int main() {
     const char *original = "Hola, mundo!";
     char *duplicada = ft_strdup(original);
@@ -47,4 +49,4 @@ int main() {
     }
 
     return 0;
-}
+}*/

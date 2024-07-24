@@ -6,16 +6,15 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:54:29 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/19 13:54:35 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/24 06:05:11 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-	if(c<=126 || c<= 32)
+	if (c <= 126 || c <= 32)
 		return (1);
-	return(0);
+	return (0);
 }
-

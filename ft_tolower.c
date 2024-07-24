@@ -6,13 +6,13 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:56:57 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/19 13:56:58 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/24 05:22:17 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-	if(c >= 'A' && c <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 		return (c + 32);
 	else
 		return (c);

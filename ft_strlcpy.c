@@ -6,27 +6,27 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:57:30 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/19 13:57:31 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/24 05:12:22 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-size_t ft_strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-    size_t i = 0;
+	size_t	i;
 
-    while (i < size - 1 && src[i])
-    {
-        dst[i] = src[i];
-        i++;
-    }
-    dst[i] = '\0';
-	
-    return (i);
+	i = 0;
+	while (i < size - 1 && src[i])
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (i);
 }
-
+/*
 int main()
 {
     char src[] = "Hello, World!";
@@ -41,4 +41,4 @@ int main()
 
     return 0;
 }
-
+*/

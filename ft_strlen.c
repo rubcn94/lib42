@@ -6,7 +6,7 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:57:27 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/19 13:57:28 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/24 06:02:38 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,14 @@
 #include <string.h>
 #include <stdio.h>
 
-size_t ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
-	while(s[i])
+	while (s[i])
 	{
-	i++;
+		i++;
 	}
-return (i);
-}
-
-int	main(void)
-{
-	printf("%zu\n", ft_strlen("caca"));
-	return (0);
+	return (i);
 }

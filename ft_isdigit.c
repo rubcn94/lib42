@@ -6,20 +6,20 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:56:06 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/19 13:56:09 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/24 05:10:39 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-	if(c >=48 || c<= 57)
-		return(1);
-			return(0);
+	if (c >= 48 || c <= 57)
+		return (1);
+	return (0);
 }
-
+/*
 int main (void)
 {
 	printf("%d", ft_isdigit(51));
-}
+}*/
