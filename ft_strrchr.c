@@ -6,14 +6,14 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 12:49:19 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/24 13:14:35 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/24 14:01:20 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char	*strrchr(const char *str, int c)
-{
+char	*ft_strrchr(const char *str, int c)
+
 	const char	*result;
 
 	result = NULL;
