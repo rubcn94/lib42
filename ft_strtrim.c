@@ -6,16 +6,12 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:57:03 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/24 05:06:55 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/25 13:47:58 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <stddef.h>
-
-char	*ft_strchr(const char *s, int c);
-size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size);
-int		ft_strlen(const char *s);
+#include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

@@ -6,32 +6,36 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:57:06 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/24 23:20:18 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/25 16:06:01 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <stddef.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	i;
-	size_t	j;
+	const char	*p1;
+	const char	*p2;
+	size_t		remaining;
 
 	if (!big)
 		return (0);
 	if (little[0] == '\0')
 		return ((char *)big);
-	i = 0;
-	while (big[i])
+	while (*big && len > 0)
 	{
-		j = 0;
-		while (big[i + j] == little[j] && (i + j) < len)
+		p1 = big;
+		p2 = little;
+		remaining = len;
+		while (*p2 && *p1 == *p2 && remaining > 0)
 		{
-			if (little[j + 1] == '\0')
-				return ((char *)big + i);
-			j++;
+			p1++;
+			p2++;
+			remaining--;
 		}
-		i++;
+		if (*p2 == '\0')
+			return ((char *)big);
+		big++;
+		len--;
 	}
 	return (0);
 }
