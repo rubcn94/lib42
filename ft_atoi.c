@@ -6,13 +6,9 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 06:02:58 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/24 23:34:01 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/25 08:36:58 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-
-#include <stdio.h>
 
 int	ft_atoi(const char *str)
 {

@@ -6,11 +6,9 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:56:06 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/24 12:27:50 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/25 07:44:36 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 int	ft_isdigit(int c)
 {

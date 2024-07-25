@@ -6,13 +6,11 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:54:38 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/24 05:07:58 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/25 07:42:11 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include "libft.h"
 #include <stddef.h>
-
-void	*ft_memset(void *s, int c, size_t n);
 
 void	ft_bzero(void *s, size_t n)
 {

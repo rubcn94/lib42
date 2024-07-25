@@ -6,11 +6,9 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:55:01 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/24 05:57:21 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/25 07:45:06 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isalpha(int c)
 {
