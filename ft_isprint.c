@@ -6,15 +6,13 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:54:29 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/24 13:45:55 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/24 22:18:20 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
 int	ft_isprint(int c)
 {
-	if (c <= 126 || c <= 32)
+	if (c >= 32 && c <= 126)
 		return (1);
 	return (0);
 }

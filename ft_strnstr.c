@@ -6,28 +6,32 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:57:06 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/24 07:17:24 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/24 23:20:18 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-size_t	ft_strlen(const char *s);
-int		ft_strncmp(const char *s1, const char *s2, size_t n);
-
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	little_len;
+	size_t	i;
+	size_t	j;
 
-	little_len = sizeof(little);
-	if (little_len == 0)
-		return (NULL);
-	while (*big != 0 && len >= little_len)
+	if (!big)
+		return (0);
+	if (little[0] == '\0')
+		return ((char *)big);
+	i = 0;
+	while (big[i])
 	{
-		if (*big == *little && ft_strncmp(big, little, little_len) == 0)
-			return ((char *)big);
-		big++;
-		len--;
+		j = 0;
+		while (big[i + j] == little[j] && (i + j) < len)
+		{
+			if (little[j + 1] == '\0')
+				return ((char *)big + i);
+			j++;
+		}
+		i++;
 	}
-	return (NULL);
+	return (0);
 }

@@ -6,67 +6,59 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 10:40:27 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/24 06:50:28 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/24 23:14:38 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <limits.h>
-#include <stdlib.h> 
+#include <stdlib.h>
 
-static int	num_length(int n)
+static int	get_num_len(int n)
 {
-	int	length;
+	int	len;
 
-	length = 0;
-	if (n == INT_MIN)
+	len = 0;
+	if (n != 0)
 	{
-		length = 11;
-		return (length);
+		if (n < 0)
+		{
+			n *= -1;
+			len++;
+		}
+		while (n != 0)
+		{
+			n /= 10;
+			len++;
+		}
 	}
-	if (n < 0)
-	{
-		length = 1;
-		n = -n;
-	}
-	if (n == 0)
-	{
-		return (1);
-	}
-	while (n > 0)
-	{
-		n /= 10;
-		length++;
-	}
-	return (length);
+	else
+		len = 1;
+	return (len);
 }
-
-static int	num_length(int n);
 
 char	*ft_itoa(int n)
 {
-	int		len;
-	char	*str;
+	int			len;
+	char		*str;
+	long int	nbr;
 
-	len = num_length(n);
-	str = (char *)malloc(len + 1);
+	len = get_num_len(n);
+	nbr = n;
+	str = (char *)malloc((len + 1) * sizeof(char));
 	if (!str)
-		return (NULL);
-	str[len] = '\0';
-	if (n == INT_MIN)
-	{
-		str[--len] = '8';
-		n /= 10;
-	}
-	if (n < 0)
+		return (0);
+	str[len--] = '\0';
+	if (nbr == 0)
+		str[0] = '0';
+	if (nbr < 0)
 	{
 		str[0] = '-';
+		nbr = -nbr;
 	}
-	while (n > 0)
+	while (nbr)
 	{
-		str[--len] = (n % 10) + '0';
-		n /= 10;
+		str[len] = (nbr % 10) + '0';
+		nbr /= 10;
+		len--;
 	}
-	if (len == 0)
-		str[0] = '0';
 	return (str);
 }

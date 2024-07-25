@@ -6,21 +6,15 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:57:57 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/24 05:26:03 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/24 23:39:44 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
+#include "libft.h"
 
-#include <stddef.h>
-
-void	ft_putchar_fd(char *c, int fd);
-
-void	ft_putstr_fd(char *str, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-	if (str == NULL)
+	if (!s)
 		return ;
-	while (*str)
-	{
-		ft_putchar_fd(str, fd);
-		str++;
-	}
+	write(fd, s, ft_strlen(s));
 }

@@ -6,35 +6,29 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 13:06:20 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/24 12:42:06 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/24 23:42:56 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h> 
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	buffer[12];
-	int		i;
-	long	num;
-
-	num = n;
-	if (num == 0)
-		write(fd, "0", 1);
-	return ;
-	if (num == -2147483648)
-		write(fd, "2147483648", 11);
-	return ;
-	if (n < 0)
+	if (n == -2147483648)
 	{
-		write(fd, "-", 1);
-		num = -num;
+		ft_putchar_fd('-', fd);
+		ft_putchar_fd('2', fd);
+		ft_putnbr_fd(147483648, fd);
 	}
-	i = 0;
-	while (n > 0)
+	else if (n < 0)
 	{
-		buffer[i++] = num % 10 + '0';
-		num /= 10;
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(-n, fd);
 	}
-	while (i > 0)
-		write(fd, &buffer[--i], 1);
+	else if (n > 9)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
+	else
+		ft_putchar_fd(n + '0', fd);
 }

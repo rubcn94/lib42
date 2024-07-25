@@ -6,16 +6,14 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:58:03 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/24 06:23:45 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/24 23:39:04 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putstr_fd(char *s, int fd);
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {
 	ft_putstr_fd(s, fd);
-	write(fd, "\n", 1);
+	ft_putchar_fd('\n', fd);
 }

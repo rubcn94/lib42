@@ -6,38 +6,31 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:57:33 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/24 05:44:46 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/24 22:50:39 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include "libft.h"
 #include <stddef.h>
 
-size_t	ft_strlen(const char *s);
-
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
 {
-	size_t	copy_len;
-	size_t	dst_len;
-	size_t	src_len;
-	size_t	total_len;
 	size_t	i;
+	size_t	len;
 
-	dst_len = ft_strlen(dst);
-	src_len = ft_strlen(src);
-	src_len = ft_strlen(src);
-	total_len = dst_len + src_len;
-	i = 0;
-	copy_len = 0;
-	if (size > dst_len)
+	if (!src)
+		return (0);
+	if (!dst)
 	{
-		copy_len = size - dst_len - 1;
-		i = 0;
-		while (src[i] && i < copy_len)
-		{
-			dst[dst_len + i] = src[i];
-			i++;
-		}
-		dst[dst_len + i] = '\0';
+		if (dsize == 0)
+			return (ft_strlen(src));
+		else
+			return (0);
 	}
-	return (total_len);
+	i = 0;
+	while (dst[i] && i < dsize)
+		i++;
+	if (i == dsize)
+		return (dsize + ft_strlen(src));
+	len = ft_strlcpy(dst + i, src, dsize - i);
+	return (i + len);
 }
