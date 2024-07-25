@@ -6,7 +6,7 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:57:43 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/24 23:26:41 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/25 20:11:45 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	if (!s)
-		return (0);
 	while (*s)
 	{
 		if (*s == (char)c)
@@ -24,5 +22,5 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if (c == '\0')
 		return ((char *)s);
-	return (0);
+	return (NULL);
 }
