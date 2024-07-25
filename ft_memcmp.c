@@ -6,22 +6,22 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 10:53:58 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/25 08:26:48 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/25 08:56:55 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stddef.h>
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	const unsigned char	*p1 = (const unsigned char *)s1;
-	const unsigned char	*p2 = (const unsigned char *)s2;
-	size_t				i;
+    const unsigned char *p1 = (const unsigned char *)s1;
+    const unsigned char *p2 = (const unsigned char *)s2;
 
-	while (n--)
-	{
-		if (*p1 != *p2)
-			return (*p1 - *p2);
-		*p1;
-		*p2;
-	}
-	return (0);
+    while (n--)
+    {
+        if (*p1 != *p2)
+            return (*p1 - *p2);
+        p1++;
+        p2++;
+    }
+    return 0;
 }
