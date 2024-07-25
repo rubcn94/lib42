@@ -6,14 +6,12 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 06:11:55 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/24 06:17:12 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/25 13:35:35 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <stddef.h>
-
-size_t	ft_strlen(const char *s);
+#include "libft.h"
 
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {

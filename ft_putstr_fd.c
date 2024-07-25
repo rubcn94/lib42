@@ -6,10 +6,9 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:57:57 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/24 23:39:44 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/25 13:35:01 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 #include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)

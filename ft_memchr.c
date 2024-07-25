@@ -6,7 +6,7 @@
 /*   By: rsierra- <rsierra-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 13:56:28 by rsierra-          #+#    #+#             */
-/*   Updated: 2024/07/25 08:17:50 by rsierra-         ###   ########.fr       */
+/*   Updated: 2024/07/25 12:58:43 by rsierra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-
 	unsigned char		target;
 	const unsigned char	*ptr;
 
